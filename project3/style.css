@@ -1,0 +1,252 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-image {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input {
+    width: 400px;
+    height: 40px;
+    padding: 0 1rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-form input:focus {
+    border-color: chocolate;
+}
+
+.search-form button {
+    background: none;
+    border: none;
+    margin-left: -40px;
+    cursor: pointer;
+}
+
+/* Cart styles */
+.cart-container {
+    position: relative;
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.cart-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: chocolate;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 300px;
+    height: calc(100vh - 80px);
+    padding: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 16px;
+    margin: 20px;
+    position: sticky;
+    top: 80px;
+}
+
+.sidebar-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebar-list a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.sidebar-list a:hover {
+    background-color: #f9f9f9;
+}
+
+.sidebar-list img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 340px;
+    padding: 2rem;
+    margin-top: -800px; /* Adjust this based on your layout needs */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .search-form input {
+        width: 300px;
+    }
+    
+    .sidebar {
+        width: 250px;
+    }
+    
+    .main-content {
+        margin-left: 290px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .logo {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+    
+    .search-form {
+        width: 100%;
+    }
+    
+    .search-form input {
+        width: 100%;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+        position: static;
+    }
+    
+    .sidebar-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .sidebar-list a {
+        padding: 0.5rem 1rem;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 1rem;
+    }
+}
+.advert{
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); ;
+
+  height: 100%;
+  background-color: #f9f9f9;
+  margin-top: 130px;
+  width: 100%;
+
+}
+.contant {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3-column grid */
+  gap: 20px; /* Spacing between items */
+  padding: 20px;
+}
+
+.contant > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd; /* Optional border */
+  border-radius: 8px; /* Optional rounded corners */
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional shadow */
+  height: 500px;
+  width: 500px;
+}
+
+.contant img {
+  width: 100%; /* Make image fill container */
+  height: 100%; /* Fixed height */
+  object-fit: cover; /* Ensures image covers area without distortion */
+  border-radius: 5px; /* Optional rounded corners for image */
+  margin-bottom: 10px;
+}
+
+.contant h5 {
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 16px;
+}
+img:hover {
+  /* Styles to transition to on hover */
+  transform: scale(1.05);
+  opacity: 0.9;
+}
